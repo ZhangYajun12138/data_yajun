@@ -1,0 +1,27 @@
+本地缓存区，本地仓库：
+git init 初始化一个Git仓库
+git add <file> 可以使用多次，添加多个文件
+git commit -m <message> 提交文件到仓库，message是本次提交的说明
+get status 获取仓库当前的状态
+git diff <file> 如果文件被修改了，查看具体修改了什么内容
+git log 获取最近到最远的提交日志，以便确认要回退到哪个版本
+git log --pretty=oneline 显示信息在一行内
+HEAD 当前版本
+HEAD^ 上一个版本
+HEAD^^ 上两个版本
+HEAD~100 上一百个版本
+git reset --hard HEAD^ 回退到上一个版本
+cat <file> 显示file内容
+git reser --hard 9d3d289 回退到某个版本,9d3d289是版本号
+git reflog 记录每一条命令，以便确认要回到未来的哪个版本
+git提交过程：先把需要提交的文件修改通通放到暂存区(git add <file>)，然后一次性提交暂存区的所有修改(git commit -m <message>)
+git diff HEAD -- <file> 查看工作区和版本库里面最新版本的区别
+git checkout -- <file> 撤销工作区的修改
+git reset HEAD <file> 把暂存区的修改撤销，然后再撤销工作区的修改
+rm <file> 删除工作区的文件
+git rm <file> 删除缓存区的文件
+
+远程仓库：
+ssh-keygen -t rsa -C "youremail@example.com" 创建SSH Key，然后登陆GitHub，打开“Account settings”，“SSH Keys”页面：然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容
+在GitHub网站创建一个Git仓库
+git remote add origin git@github.com:michaelliao/learngit.git 本地关联远程库
