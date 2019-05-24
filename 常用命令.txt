@@ -22,6 +22,7 @@ rm <file> 删除工作区的文件
 git rm <file> 删除缓存区的文件
 
 远程仓库：
-ssh-keygen -t rsa -C "youremail@example.com" 创建SSH Key，然后登陆GitHub，打开“Account settings”，“SSH Keys”页面：然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容
-在GitHub网站创建一个Git仓库
-git remote add origin git@github.com:michaelliao/learngit.git 本地关联远程库
+ssh-keygen -t rsa -C "youremail@example.com" 创建SSH Key，然后登陆GitHub，打开“Account settings”，“SSH Keys”页面：然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容，在GitHub网站创建一个Git仓库
+git remote add origin git@server-name:path/repo-name.git 本地关联远程库
+git push -u origin master 第一次推送master分支的所有内容
+git push origin master 非第一次推送
