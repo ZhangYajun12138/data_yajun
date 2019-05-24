@@ -26,3 +26,5 @@ ssh-keygen -t rsa -C "youremail@example.com" 创建SSH Key，然后登陆GitHub�
 git remote add origin git@server-name:path/repo-name.git 本地关联远程库
 git push -u origin master 第一次推送master分支的所有内容
 git push origin master 非第一次推送
+git clone git@github.com:ZhangYajun12138/test_learn.git 从远程库克隆到本地库
+git clone https://github.com/ZhangYajun12138/unittest 从远程库克隆到本地库
